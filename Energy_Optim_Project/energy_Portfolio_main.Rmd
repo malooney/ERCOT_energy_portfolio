@@ -1,0 +1,36 @@
+---
+title: "Energy Portfolio Optim"
+author: "Matthew Aaron Looney"
+date: "10/08/2017"
+output: pdf_document
+---
+
+```{r echo=FALSE, message=FALSE, results='asis', cache=F}
+
+cat("\014")
+rm(list=ls())
+set.seed(12345)
+options(scipen=999)
+
+library(stargazer)
+
+################################################################################
+## Historical data plot for energy profile mix from 2008-2017
+
+source("/Users/malooney/Google Drive/digitalLibrary/*AAEC6305_Economic_Optimization/Economic_Optimization/Energy_Optim_Project/Scripts_and_functions/plot_historicalData_energyProfile_2008to2017.R")
+
+plot_historicalData_energyProfile_2008to2017()
+
+################################################################################
+
+################################################################################
+
+source("/Users/malooney/Google Drive/digitalLibrary/*AAEC6305_Economic_Optimization/Economic_Optimization/Energy_Optim_Project/Scripts_and_functions/optim_model_2016_demand.R")
+
+optim_model_2016_demand()
+
+################################################################################
+
+```
+
+
